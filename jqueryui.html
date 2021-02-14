@@ -1,0 +1,27 @@
+<html>
+<head>
+   <link rel="stylesheet" type="text/css" href="jquery-ui.min.css"> 
+    <link rel="stylesheet" type="text/css" href="jquerystyles.css"> 
+</head>
+<body>
+    <span id="btn">btn</span>
+ 
+<div id="dialog" title="Basic dialog" class="dialog">
+  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and</p>
+</div>
+
+    <script src="jquery.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script>
+        $( function() {
+            $( "#dialog" ).dialog({
+                autoOpen:false
+            });
+            
+            $("#btn").on('click', function() {
+                $("#dialog" ).dialog("open");
+            });
+        });
+    </script>
+</body>
+</html>
